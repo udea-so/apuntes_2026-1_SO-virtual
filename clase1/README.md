@@ -207,9 +207,6 @@ Estos son términos que distinguen a un usuario avanzado de un ingeniero:
 
 ## Taller de Estudio: Introducción a los Sistemas Operativos
 
-**Basado en OSTEP - Capítulo 2**
-
-
 ### I. Definiciones y Conceptos Fundamentales
 
 *Responda brevemente con sus propias palabras.*
@@ -267,13 +264,12 @@ Estos son términos que distinguen a un usuario avanzado de un ingeniero:
 
 8. **Simulación de Concurrencia:** Analice el siguiente pseudocódigo de un contador compartido por dos hilos, donde `counter` inicia en 0 y cada hilo lo incrementa `N` veces.
 
-```c
-// Hilo 1 y Hilo 2 ejecutan esto:
-for (i = 0; i < N; i++) {
-    counter = counter + 1;
-}
-
-```
+   ```c
+   // Hilo 1 y Hilo 2 ejecutan esto:
+   for (i = 0; i < N; i++) {
+     counter = counter + 1;
+   }
+   ```
 
    * Si `N = 1000`, ¿por qué es posible que el valor final de `counter` sea **menor** a 2000?
    * ¿Qué pasos de bajo nivel (instrucciones de máquina) componen la operación `counter = counter + 1` y dónde ocurre el fallo?
@@ -289,6 +285,3 @@ for (i = 0; i < N; i++) {
    * Recurso Físico 2: ___________  Abstracción: ___________
    * Recurso Físico 3: ___________  Abstracción: ___________
 
----
-
-*Referencias: OSTEP Cap. 2, Notas de clase 14-08-2025.*
