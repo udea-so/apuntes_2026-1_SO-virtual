@@ -203,11 +203,6 @@ Estos son términos que distinguen a un usuario avanzado de un ingeniero:
 * *Mecanismo:* ¿Cómo hacemos un cambio de contexto? (Low-level assembly).
 * *Política:* ¿A qué proceso le toca ahora? (Algoritmo de Scheduling).
 
-
-¡Claro que sí! Aquí tienes un formato de **Taller / Cuestionario de Estudio** basado en el Capítulo 2 (Introducción) de OSTEP.
-
-Está diseñado para que lo copies y pegues en un documento (Word, Google Docs o Markdown) y se lo entregues a tus estudiantes. He incluido las preguntas de simulación clásicas de Remzi y preguntas conceptuales abiertas para que ellos desarrollen la respuesta.
-
 ---
 
 ## Taller de Estudio: Introducción a los Sistemas Operativos
@@ -245,9 +240,7 @@ Está diseñado para que lo copies y pegues en un documento (Word, Google Docs o
 
 ### II. Análisis del Funcionamiento Interno ("Under the Hood")
 
-5. **Virtualización de Memoria:**
-
-Si dos procesos distintos (Proceso A y Proceso B) imprimen la dirección de memoria de una variable y obtienen exactamente el mismo valor (ej. `0x200000`), ¿están accediendo a la misma ubicación física en la RAM? Explique detalladamente qué está haciendo el sistema operativo.
+5. **Virtualización de Memoria:** Si dos procesos distintos (Proceso A y Proceso B) imprimen la dirección de memoria de una variable y obtienen exactamente el mismo valor (ej. `0x200000`), ¿están accediendo a la misma ubicación física en la RAM? Explique detalladamente qué está haciendo el sistema operativo.
 
    ```
    
@@ -262,19 +255,17 @@ Si dos procesos distintos (Proceso A y Proceso B) imprimen la dirección de memo
 
 ### III. Ejercicios de Simulación (Pensamiento Computacional)
 
-7. **Simulación de CPU:**
-Suponga que tiene un programa `cpu.c` que simplemente imprime una letra ("A", "B", "C") en un bucle infinito cada segundo.
-* Si ejecuta `./cpu A & ./cpu B & ./cpu C &` en una terminal.
-* Describa qué vería en la salida de la consola.
-* Explique cómo es posible este comportamiento si su computador solo tuviera **un** procesador físico.
+7. **Simulación de CPU:** Suponga que tiene un programa `cpu.c` que simplemente imprime una letra ("A", "B", "C") en un bucle infinito cada segundo.
+   * Si ejecuta `./cpu A & ./cpu B & ./cpu C &` en una terminal.
+   * Describa qué vería en la salida de la consola.
+   * Explique cómo es posible este comportamiento si su computador solo tuviera **un** procesador físico.
   
-  ```
+   ```
    
-  ```
+   ```
 
 
-8. **Simulación de Concurrencia:**
-Analice el siguiente pseudocódigo de un contador compartido por dos hilos, donde `counter` inicia en 0 y cada hilo lo incrementa `N` veces.
+8. **Simulación de Concurrencia:** Analice el siguiente pseudocódigo de un contador compartido por dos hilos, donde `counter` inicia en 0 y cada hilo lo incrementa `N` veces.
 
 ```c
 // Hilo 1 y Hilo 2 ejecutan esto:
@@ -284,15 +275,19 @@ for (i = 0; i < N; i++) {
 
 ```
 
-* Si `N = 1000`, ¿por qué es posible que el valor final de `counter` sea **menor** a 2000?
-* ¿Qué pasos de bajo nivel (instrucciones de máquina) componen la operación `counter = counter + 1` y dónde ocurre el fallo?
+   * Si `N = 1000`, ¿por qué es posible que el valor final de `counter` sea **menor** a 2000?
+   * ¿Qué pasos de bajo nivel (instrucciones de máquina) componen la operación `counter = counter + 1` y dónde ocurre el fallo?
+   
+   ```
+   
+   ```
 
 ### IV. Pregunta de Investigación
 
 9. Investigue y liste tres (3) ejemplos de recursos físicos de un computador y nombre la abstracción virtual que el sistema operativo crea para cada uno de ellos.
-* Recurso Físico 1: ___________  Abstracción: ___________
-* Recurso Físico 2: ___________  Abstracción: ___________
-* Recurso Físico 3: ___________  Abstracción: ___________
+   * Recurso Físico 1: ___________  Abstracción: ___________
+   * Recurso Físico 2: ___________  Abstracción: ___________
+   * Recurso Físico 3: ___________  Abstracción: ___________
 
 ---
 
