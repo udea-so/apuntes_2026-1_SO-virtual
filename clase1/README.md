@@ -200,8 +200,8 @@ Estos son términos que distinguen a un usuario avanzado de un ingeniero:
 * **System Call (Trap):** Instrucción especial que permite a un programa de usuario saltar controladamente al kernel para pedir un servicio. Cambia el *mode bit* a 1.
 * **Return-from-Trap:** Instrucción que devuelve el control al usuario y resetea el *mode bit* a 0.
 * **Separación de Mecanismo y Política:**
-* *Mecanismo:* ¿Cómo hacemos un cambio de contexto? (Low-level assembly).
-* *Política:* ¿A qué proceso le toca ahora? (Algoritmo de Scheduling).
+* **Mecanismo:** ¿Cómo hacemos un cambio de contexto? (Low-level assembly).
+* **Política:** ¿A qué proceso le toca ahora? (Algoritmo de Scheduling).
 
 ---
 
