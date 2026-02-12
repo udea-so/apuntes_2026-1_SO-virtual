@@ -47,4 +47,5 @@ Henry explicó la estructura y mecánica del curso, indicando que las clases se 
 
 Henry explicó que los exámenes serán individuales y tentativos para el 7 de abril, pero se pueden negociar las fechas según el progreso del curso. Se discutió que los laboratorios requerirán trabajo en equipo mínimo, por lo que los estudiantes deberían buscar compañeros para coordinarse. Henry también detalló el proceso de seguimiento, que incluye quizzes después de cada clase y un parcial al final, y mencionó que enviará una encuesta para recopilar datos necesarios y coordinar el curso con el profe del laboratorio.
 
-> **Nota**: La IA puede cometer errores. Compruebe su precisión.
+> [!WARNING]
+> La IA puede cometer errores. Compruebe su precisión.

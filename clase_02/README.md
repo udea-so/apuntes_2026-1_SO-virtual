@@ -1,6 +1,10 @@
-# Notas de Estudio: Introducción a los Sistemas Operativos
+![Built with AI](https://img.shields.io/badge/Built%20with-AI-blue.svg)
 
-**Clase 1**
+# Notas de Estudio: Introducción a los Sistemas Operativos - Clase 2
+
+
+> [!IMPORTANT]
+> Los codigos aqui empleados son tomados del siguiente [link](https://github.com/remzi-arpacidusseau/ostep-code/tree/master/intro)
 
 ---
 
@@ -28,9 +32,9 @@ Más allá de ser un "intermediario", en este nivel debemos ver al SO desde tres
 
 3. **Como Librería Estándar (Standard Library):**
   
-  > **Concepto:** Expone una API (System Calls) para que las aplicaciones interactúen con el hardware sin conocer sus detalles físicos (ej. `open()`, `write()`, `fork()`).
+   > **Concepto:** Expone una API (System Calls) para que las aplicaciones interactúen con el hardware sin conocer sus detalles físicos (ej. `open()`, `write()`, `fork()`).
    
-  ![fig1](img/cl1_fig1_d.png)
+   ![fig1](img/cl1_fig1_d.png)
   
 ### La Jerarquía de Ejecución
 
@@ -62,26 +66,85 @@ Este código demuestra que, aunque solo tengas 1 CPU física, varios procesos co
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
-#include <assert.h>
-#include "common.h"
+#include <sys/stat.h>
 
-int main(int argc, char *argv[]) {
-    if (argc != 2) {
-        fprintf(stderr, "usage: cpu <string>\n");
-        exit(1);
-    }
-    char *str = argv[1];
+double getTime() {
+    struct timeval t;
+    gettimeofday(&t, NULL);
+    return (double) t.tv_sec + (double) t.tv_usec/1e6;
+}
+
+void wait(int howlong) {
+    double t = getTime();
+    while ((getTime() - t) < (double) howlong)
+      ; //wait...
+}
+
+int main(int argc, char *argv[])
+{
+    char *str = argv[1]; //string we passed
+
     while (1) {
-        Spin(1); // Espera activa de 1 segundo (simula carga)
-        printf("%s\n", str);
+      printf("%s\n", str);
+      wait(5);
     }
     return 0;
 }
 ```
 
-**Comportamiento observado:**
+#### Comportamiento observado
 
-Si ejecutas `./cpu A & ./cpu B & ./cpu C &`, verás las salidas mezcladas (`A`, `B`, `C`, `A`...). El OS está "virtualizando" el procesador.
+* **Ejecución del proceso sin paso de parametros**
+    
+    ```
+    prompt> ./cpu
+    Segmentation fault (core dumped)
+    ```
+
+* **Ejecución un proceso pasando un parametro**
+    
+    ```
+    prompt> ./cpu A
+    A
+    A
+    A
+    ^C
+    ```
+
+* **Ejecución un proceso pasando un parametro en background**
+    
+    ```
+    prompt> ./cpu A
+    A
+    A
+    A
+    ^C
+    A
+    A
+    prompt> pkill cpu
+    [1]+  Terminated              ./cpu A
+    ```
+
+* **Ejecución de varios procesos en background**
+
+    ```
+    prompt> ./cpu A & ./cpu B &
+    [1] 193
+    [2] 194
+    B
+    A
+    B
+    A
+    B
+    A
+    B
+    ^C
+    A
+    B
+    prompt> pkill cpu
+    [1]-  Terminated              ./cpu A
+    [2]+  Terminated              ./cpu B
+    ```
 
 ---
 
@@ -105,27 +168,99 @@ Muestra cómo dos procesos independientes pueden tener la **misma** dirección d
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "common.h"
+#include <sys/time.h>
+#include <sys/stat.h>
+
+double getTime() {
+    struct timeval t;
+    gettimeofday(&t, NULL);
+    return (double) t.tv_sec + (double) t.tv_usec/1e6;
+}
+
+void wait(int howlong) {
+    double t = getTime();
+    while ((getTime() - t) < (double) howlong)
+      ; //wait...
+}
 
 int main(int argc, char *argv[]) {
-    int *p = malloc(sizeof(int)); // Asigna memoria en el heap
-    assert(p != NULL);
-    printf("(%d) address pointed to by p: %p\n", getpid(), p);
-    *p = 0;
-    while (1) {
-        Spin(1);
+    int *p;
+    //allocates memory
+    p = malloc(sizeof(int));
+    //prints address of memory, inserting 0
+    printf("(%d) addr pointed to by p: %p\n", (int) getpid(), p);
+    // assign input to address stored in p
+    *p = atoi(argv[1]);
+    //loop every second and increment address value of p
+    while (1) {  
+        wait(1);
         *p = *p + 1;
-        printf("(%d) p: %d\n", getpid(), *p);
+        printf("(%d) value of p: %d\n", getpid(), *p);
     }
     return 0;
 }
-
 ```
+
+> [!IMPORTANT]
+> Antes de ejecutar este ejemplo revise la sección de **Details** del siguiente [link](https://github.com/remzi-arpacidusseau/ostep-code/tree/master/intro) y siga las recomendaciones para la compilación aqui dadas.
 
 **Punto Clave:** Si corres dos instancias de esto, ambas imprimirán la *misma dirección de puntero* (ej. `0x200000`), pero incrementarán contadores independientes. ¡Esa dirección `0x200000` es una mentira del SO!
 
 ![fig1](img/cl1_fig1_f.png)
 
+#### Comportamiento observado
+
+Para detener la aleatorización de memoria se debe realizar un paso de compilación diferente si se emplea WSL. Para esto ejecute los siguientes comandos:
+
+1. **Desactivación a nivel de Kernel (Global en la instancia)**
+    ```
+    prompt> sudo sysctl -w kernel.randomize_va_space=0
+    ```
+2. **Compilación "Totalmente Estática"**
+   
+   ```
+   prompt> gcc -O0 -no-pie -static mem.c -o mem
+   ```
+
+3. **Verificacion del binario**: Debe salir `ELF 64-bit LSB executable...` o la palabra `statically linked`, si sale `ELF 64-bit LSB pie executable..` esta mal.
+
+    ```
+    prompt> file ./mem
+    ./mem: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=c39e69da5e2e4fdde5d5f42e813f87b8714ad7a3, for GNU/Linux 3.2.0, not stripped
+    ```
+
+4. **Ejecute el ejemplo**
+   
+   * **Ejecución de un solo proceso**:
+ 
+        ```
+        prompt> ./mem 1
+        (305) addr pointed to by p: 0x4052a0
+        (305) value of p: 2
+        (305) value of p: 3
+        (305) value of p: 4
+        (305) value of p: 5
+        ^C
+        ```
+   * **Ejecución de un dos procesos**:
+  
+        ```
+        prompt> ./mem 1 & ./mem 10
+        [1] 285
+        (285) addr pointed to by p: 0x4052a0
+        (286) addr pointed to by p: 0x4052a0
+        (285) value of p: 2
+        (286) value of p: 11
+        (285) value of p: 3
+        (286) value of p: 12
+        (285) value of p: 4
+        (286) value of p: 13
+        (285) value of p: 5
+        (286) value of p: 14
+        ...
+        prompt> pkill mem
+        [1]+  Terminated              ./mem 1
+        ```
 ---
 
 ## 4. Concurrencia (El problema de los hilos)
@@ -149,34 +284,72 @@ Si ocurre una interrupción de temporizador (timer interrupt) entre el paso 1 y 
 ```c
 #include <stdio.h>
 #include <stdlib.h>
-#include "common.h"
-#include "common_threads.h"
+#include <pthread.h>
+#include <sys/time.h>
+#include <sys/stat.h>
 
-volatile int counter = 0;
-int loops;
+
+double getTime() {
+    struct timeval t;
+    gettimeofday(&t, NULL);
+    return (double) t.tv_sec + (double) t.tv_usec/1e6;
+}
+
+void wait(int howlong) {
+    double t = getTime();
+    while ((getTime() - t) < (double) howlong)
+      ; //wait...
+}
+
+volatile int counter = 0; 
+int increments;
 
 void *worker(void *arg) {
     int i;
-    for (i = 0; i < loops; i++) {
-        counter++;
+    for (i = 0; i < increments; i++) {
+      counter++;
     }
     return NULL;
 }
 
 int main(int argc, char *argv[]) {
-    loops = atoi(argv[1]);
+    increments = atoi(argv[1]);
     pthread_t p1, p2;
-    // ... crear hilos p1 y p2 que ejecuten worker ...
-    // ... esperar a que terminen (join) ...
-    printf("Final value : %d\n", counter);
+  
+    //create two threads
+    pthread_create(&p1, NULL, worker, NULL); 
+    pthread_create(&p2, NULL, worker, NULL);
+  
+    pthread_join(p1, NULL);
+    pthread_join(p2, NULL);
+    printf("Final value   : %d\n", counter);
     return 0;
 }
 ```
+#### Comportamiento observado
 
 **Resultado esperado vs. Realidad:**
-Si `loops = 100000`, esperarías que el contador final sea 200,000. Sin embargo, a menudo obtendrás 143,012 o 198,500.
 
-* **Lección:** Sin primitivas de sincronización (locks, semáforos), la concurrencia lleva a estados inconsistentes.
+Si `loops = 100000`, se esperaría que el contador final sea `200000`. Sin embargo, a menudo se obtienen valores diferentes como `143012` o `198500`.
+
+```
+bash> ./threads
+Segmentation fault (core dumped)
+```
+
+```
+bash> ./threads 100000
+Final value   : 131222
+```
+
+```
+bash> ./threads 100000
+Final value   : 124701
+```
+
+> [!IMPORTANT]
+> **Lección:** Sin primitivas de sincronización (locks, semáforos), la concurrencia lleva a estados inconsistentes.
+
 
 ---
 
@@ -189,6 +362,20 @@ La memoria (RAM) es volátil. Para mantener datos necesitamos hardware de I/O (D
 * **Mecanismo:** `fsync()` o journaling son necesarios porque el SO suele mantener los datos en caché antes de escribirlos físicamente al disco para mejorar el rendimiento. Si la luz se va antes del `write` físico, adiós datos.
 
 ![fig1](img/cl1_fig5.png)
+
+
+### Snippet de Código: `io.c`
+
+Este programa crea un archivo llamado `/tmp/file` y escribe una cadena en él.
+
+```
+bash> ./io
+```
+
+```
+bash> cat /tmp/file
+I will persist!
+```
 
 ---
 
@@ -291,3 +478,7 @@ Estos son términos que distinguen a un usuario avanzado de un ingeniero:
 * https://www3.nd.edu/~pbui/teaching/cse.20289.sp20/
   * https://www3.nd.edu/~pbui/teaching/cse.20289.sp20/reading08.html
 * https://kuleuven-diepenbeek.github.io/osc-course/
+
+
+> [!IMPORTANT]
+> **Nota de Transparencia:** Este documento fue generado y adaptado mediante el uso de **IA Generativa**. El contenido ha sido supervisado, validado y refinado por intervención humana para garantizar su precisión técnica y coherencia pedagógica. No obstante, pueden haber errores.

@@ -2,6 +2,9 @@
 
 Este repositorio contiene el código de ejemplo utilizado en la Clase 02 de Sistemas Operativos.
 
+> [!WARNING]
+> Antes de ejecutar este ejemplo revise la sección de **Details** del siguiente [link](https://github.com/remzi-arpacidusseau/ostep-code/tree/master/intro) y siga las recomendaciones para la compilación aqui dadas.
+
 ## Contenido
 
 - `Makefile.mk`: Archivo `Makefile` para compilar los programas.
