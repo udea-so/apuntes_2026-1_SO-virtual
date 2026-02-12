@@ -285,3 +285,9 @@ Estos son términos que distinguen a un usuario avanzado de un ingeniero:
    * Recurso Físico 2: ___________  Abstracción: ___________
    * Recurso Físico 3: ___________  Abstracción: ___________
 
+## Referencias adicionales
+
+* https://www3.nd.edu/~pbui/teaching/cse.30341.fa24/
+* https://www3.nd.edu/~pbui/teaching/cse.20289.sp20/
+  * https://www3.nd.edu/~pbui/teaching/cse.20289.sp20/reading08.html
+* https://kuleuven-diepenbeek.github.io/osc-course/
