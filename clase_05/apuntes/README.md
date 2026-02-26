@@ -211,13 +211,20 @@ Para solucionar el **Efecto Convoy** visto en FIFO, surge la política **SJF**. 
 
 Retomamos el caso donde el proceso **A** dura **100s**, mientras que **B** y **C** duran **10s**. Si todos llegan en $T=0$, SJF reordena la ejecución para priorizar a los más cortos.
 
-El orden de ejecución será: **B → C → A**.
+| Proceso | Arrival Time | Run-time (CPU) |
+| --- | --- | --- |
+| A | 0 | 100 |
+| B | 0 | 10 |
+| C | 0 | 10 |
+
+
+El orden de ejecución, despues de ordenar sera:
 
 ```mermaid
 graph LR
-    C((C)) --> B((B))
-    B --> A((A))
-    A --> RQ[ READY QUEUE ]
+    A((A)) --> C((C))
+    C --> B((B))
+    B --> RQ[ READY QUEUE ]
 
     %% Colores diferenciados por proceso
     style C fill:#f6ad55,stroke:#c05621,stroke-width:2px,color:#000
@@ -227,12 +234,6 @@ graph LR
     %% Estilo de la cola
     style RQ fill:#f0f4ff,stroke:#2b6cb0,stroke-width:2px,stroke-dasharray: 5 5,color:#000
 ```
-
-| Proceso | Arrival Time | Run-time (CPU) |
-| --- | --- | --- |
-| A | 0 | 100 |
-| B | 0 | 10 |
-| C | 0 | 10 |
 
 ![sjf1](images/sjf1.gif)
 
