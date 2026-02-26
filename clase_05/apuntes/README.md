@@ -1,3 +1,5 @@
+![Built with AI](https://img.shields.io/badge/Built%20with-AI-blue.svg)
+
 # Planificación de CPU (CPU Scheduling)
 
 ## Objetivos de Aprendizaje
@@ -635,5 +637,5 @@ De esta manera, el sistema **aprende del pasado para predecir el futuro**, logra
 > [!Important]
 > La planificación no es solo una cuestión de algoritmos, sino de entender la carga de trabajo (*workload*) y decidir qué es más importante para el usuario en ese momento.
 
-
-
+> [!IMPORTANT]
+> **Nota de Transparencia:** Este documento fue generado y adaptado mediante el uso de **IA Generativa**. El contenido ha sido supervisado, validado y refinado por intervención humana para garantizar su precisión técnica y coherencia pedagógica. No obstante, pueden haber errores.
