@@ -16,7 +16,12 @@ En la siguiente tabla se encuentran los apuntes a mano de cada sesión del curso
 |2	 | 3 | 17/02/2026 | Clase 3 - Procesos | Apuntes clase 3 [[pdf]](clase_03/SO_apuntes_clase3_annotated.pdf) [[apuntes]](clase_03/apuntes/) | Diferencia entre programas y procesos, Abstracción de un proceso, estructuras de datos relacionadas (lista de procesos, PCB, etc.)  |
 |	 | 4 | 19/02/2026 | ---- | --- | No huvo clase, la red estaba caida |
 |3   | 5 | 24/02/2026 | Clase 4 - Ejecución Directa Limitada (LDE) - Parte 1| Apuntes clase 4 [[pdf]](clase_04/SO_apuntes_clase4_annotated.pdf) [[apuntes]](clase_04/apuntes/) | --- |
-|    | 6 | 26/02/2026 | Clase 4 - Ejecución Directa Limitada (LDE) - Parte 2| Apuntes clase 4 [[pdf]](clase_04/SO_apuntes_clase4_annotated.pdf) [[apuntes]](clase_04/apuntes/) | --- |
+|    | 6 | 26/02/2026 | Clase 5 - Ejecución Directa Limitada (LDE) - Parte 2| Apuntes clase 4 [[pdf]](clase_04/SO_apuntes_clase4_annotated.pdf) [[apuntes]](clase_04/apuntes/) | --- |
+|4   | 7 | 03/03/2026 | Clase 6 - Politicas de planificación - Parte 1| Apuntes clase 5 [[pdf]](clase_05/SO_apuntes_clase5_annotated.pdf) [[apuntes]](clase_05/apuntes/) | --- |
+|    | 8 | 05/03/2026 | Clase 7 - Politicas de planificación - Parte 2| Apuntes clase 5 [[pdf]](clase_05/SO_apuntes_clase5_annotated.pdf) [[apuntes]](clase_05/apuntes/) | --- |
+
+
+
 
 ## Recursos de utilidad
 
