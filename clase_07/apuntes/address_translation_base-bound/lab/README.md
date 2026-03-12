@@ -1,20 +1,20 @@
-# Lab
+# Laboratorio
 
-## Intro
+## Introducción
 
-In this lab, we’ll use a simulator, `mem_relocation.py` to show how address translations work in a system with base and bounds registers.
+En este laboratorio, se utilizará un simulador, [`mem_relocation.py`](mem_relocation.py), para mostrar cómo funciona la traducción de direcciones en un sistema con registros de base y límite.
 
-**Note**: The lab assumes a slightly different layout as opposed to what was introduced earlier. Instead of the heap and stack on opposing sides of memory, the code, stack, and heap are all contiguous.
+**Nota**: El laboratorio asume una disposición de memoria ligeramente diferente a la presentada anteriormente. En lugar de tener el montículo (*heap*) y la pila (*stack*) en extremos opuestos de la memoria, el código, el stack y el heap se encuentran todos contiguos.
 
-Memory can only grow toward higher areas of the address space.
+La memoria solo puede crecer hacia las áreas más altas del espacio de direccionamiento.
 
 <p align="center">
   <img src="image.webp" alt="Address Translation">
 </p>
 
-The bounds register in the above image is **7KB**, which represents the end of the address space. An exception would be raised if an address exceeds the limit.
+El registro de límite (*bounds*) en la imagen de arriba es de **7KB**, lo cual representa el final del espacio de direccionamiento. Se generaría una excepción si una dirección excede dicho límite.
 
-**Run simulation**
+**Ejecutar simulación**
 
 ```
 python3 mem_relocation.py 1
@@ -32,7 +32,7 @@ Virtual Address Trace:
   * 0x0331 (decimal: 817)
 ```
 
-The output should be:
+La salida debería ser:
 
 ```
 Base and Boards Information
@@ -48,26 +48,27 @@ Virtual Address Trace:
 * 0x0331 (decimal: 817)
 ```
 
-The simulation creates a set of virtual address spaces. You will be asked questions to determine if the address is out of bounds or what its base address is.
-* `0x01a9` - valid address because it is less than the limit. The base address would become `0x0000322b`.
-* `0x0101` - valid address because it is less than the limit. The base address would become `0x00003183`.
-* `0x021d` - out-of-bounds address because it exceeds the limit.
-* `0x0182` - valid address because it is less than the limit. The base address would become `0x00003204`.
-* `0x0331`- out-of-bounds address because it exceeds the limit.
+La simulación crea un conjunto de espacios de direcciones virtuales. Se le realizarán preguntas para determinar si la dirección está fuera de los límites o cuál es su dirección física resultante.
 
-Calculations are performed using then converting them to hexadecimal. For the address `0x01a9`, the decimal value is `425` which is less than the limit of `472`. Add this decimal value with that of the base:
+* `0x01a9`: dirección válida porque es menor que el límite. La dirección física resultante sería `0x0000322b`.
+* `0x0101`: dirección válida porque es menor que el límite. La dirección física resultante sería `0x00003183`.
+* `0x021d`: dirección fuera de límites porque excede el límite permitido.
+* `0x0182`: dirección válida porque es menor que el límite. La dirección física resultante sería `0x00003204`.
+* `0x0331`: dirección fuera de límites porque excede el límite permitido.
+
+Los cálculos se realizan utilizando valores decimales que luego se convierten a hexadecimal. Para la dirección `0x01a9`, el valor decimal es `425`, el cual es menor que el límite de `472`. Sume este valor decimal con el de la base:
 
 ```
 12418 + 425 = 12843
 ```
 
-Take `12843` and convert it to hexadecimal. This gives you the final address of `0x0000322b`.
+Tome el valor `12843` y conviértalo a hexadecimal. Esto le dará la dirección física final de `0x0000322b`.
 
-Use this information to help you answer the questions on the next page.
+Utilice esta información para ayudarse a responder las preguntas en la página siguiente.
 
-## Simulation 1
+## Simulación 1
 
-Run the simulation by clicking the button below. Use the output to answer the questions below. Use this [site](https://www.binaryhexconverter.com/decimal-to-hex-converter) to help you convert numbers to hexadecimal.
+Ejecute la simulación haciendo clic en el botón de abajo. Utilice la salida para responder las preguntas presentadas a continuación. Puede utilizar este [sitio](https://www.binaryhexconverter.com/decimal-to-hex-converter) para ayudarse a convertir los números a hexadecimal.
 
 ```
 python3 mem_relocation.py 2
@@ -85,18 +86,17 @@ Virtual Address Trace:
   * 0x0d3 (decimal: 211)
 ```
 
-Select the proper address values for the simulation above.
+Seleccione los valores de dirección adecuados para la simulación anterior.
 
-* The address for 0x01e3 is out of bounds
-* The address for 0x0171 is 0x000031f3
-* The address for 0x0288 is out of bounds
-* The address for 0x01ad is 0x0000322f
-* The address for 0x0d3 is 0x00003155
+* La dirección para 0x01e3 está fuera de límites.
+* La dirección para 0x0171 es 0x000031f3.
+* La dirección para 0x0288 está fuera de límites.
+* La dirección para 0x01ad es 0x0000322f.
+* La dirección para 0x0d3 es 0x00003155.
 
+### Simulación 2
 
-### Simulation 2
-
-Run the simulation by clicking the button below. Use the output to answer the questions below. Use this [site](https://www.binaryhexconverter.com/decimal-to-hex-converter) to help you convert numbers to hexadecimal.
+Ejecute la simulación haciendo clic en el botón de abajo. Utilice la salida para responder las preguntas presentadas a continuación. Puede utilizar este [sitio](https://www.binaryhexconverter.com/decimal-to-hex-converter) para ayudarse a convertir los números a hexadecimal.
 
 ```
 python3 mem_relocation.py 3
@@ -114,10 +114,11 @@ Virtual Address Trace:
   * 0x01d9 (decimal: 473)
 ```
 
-Select the proper address values for the simulation above.
+Seleccione los valores de dirección adecuados para la simulación anterior.
 
-* The address for 0x01d8 is out of bounds
-* The address for 0x0b6 is 0x00003138
-* The address for 0x0236 is out of bounds
-* The address for 0x01d5 is 0x00003257
-* The address for 0x01d9 is out of bounds
+* La dirección para 0x01d8 está fuera de límites.
+* La dirección para 0x0b6 es 0x00003138.
+* La dirección para 0x0236 está fuera de límites.
+* La dirección para 0x01d5 es 0x00003257.
+* La dirección para 0x01d9 está fuera de límites.
+

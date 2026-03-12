@@ -1,57 +1,50 @@
-# Lab
+# Laboratorio
 
-The program, `use-memory` has already been created. You can take a look at the [source code](use-memory.c) if you would like. The program allocates memory based on input from the user. We do not, however, want to call this program directly. Instead we want to use the GNU `time` [utility](https://www.gnu.org/software/time/) to monitor memory usage for `use-memory`.
+El programa `use-memory` ya ha sido creado. Se puede revisar el [código fuente](use-memory.c) si así se desea. El programa asigna memoria basándose en la entrada proporcionada por el usuario. No obstante, no se recomienda llamar a este programa directamente. En su lugar, se debe utilizar la [utilidad](https://www.gnu.org/software/time/) `time` de GNU para monitorear el uso de memoria de `use-memory`.
 
-
-The command below calls a script that invokes the time utility and `use-memory` with `200` being a parameter.
+El siguiente comando invoca un script que llama a la utilidad `time` y al programa `use-memory`, utilizando `200` como parámetro:
 
 ```
 bash monitor-memory.sh 200
 ```
 
-You will be asked to call this script with different input and answer the questions below.
+Se le solicitará ejecutar este script con diferentes valores de entrada y responder las preguntas que se presentan a continuación.
 
-### Lab question 1
+### Pregunta de laboratorio 1
 
-Run the following command in the terminal:
+Ejecute el siguiente comando en la terminal:
 
 ```
 bash monitor-memory.sh 16
-
 Memory Used: 17664 kilobytes
 ```
 
+¿Qué sucede cuando se pasa al script un número menor a 200?
 
-What happens when you pass the script a number smaller than 200?
-- [x] Less memory is allocated
-- [ ] More memory is allocated
-- [ ] The same amount of memory is allocated
+* [ ] Se asigna menos memoria
+* [ ] Se asigna más memoria
+* [ ] Se asigna la misma cantidad de memoria
 
-> When a number smaller than 200 is used, the amount of memory allocated decreases.
+### Pregunta de laboratorio 2
 
-### Lab Question 2
-
-Run the following command in the terminal:
+Ejecute el siguiente comando en la terminal:
 
 ```
 bash monitor-memory.sh 400
-
 Memory Used: 410880 kilobytes
 ```
 
-What happens when you pass the script a number larger than 200?
-- [ ] Less memory is allocated
-- [x] More memory is allocated
-- [ ] The same amount of memory is allocated
+¿Qué sucede cuando se pasa al script un número mayor a 200?
 
-> If a number larger than 200 is used, the amount of memory allocated increases.
+* [ ] Se asigna menos memoria
+* [ ] Se asigna más memoria
+* [ ] Se asigna la misma cantidad de memoria
 
-### Lab Question 3
+### Pregunta de laboratorio 3
 
-What does the number (`200`, `16`, `400`) passed to the monitor-memory script represent?
-- [ ] The amount of memory to be allocated in bytes.
-- [ ] The amount of memory to be allocated in kilobytes.
-- [ ] The amount of memory to be allocated in gigabytes.
-- [x] The amount of memory to be allocated in megabytes.
+¿Qué representa el número (`200`, `16`, `400`) pasado al script monitor-memory?
 
-> This number represents the amount of memory to be allocated in megabytes. **Important**: memory allocation is a complex issue that depends on a variety of factors in addition to the code you write. That is why the script returns a number of kilobytes that converts a similar but not exact number of megabytes.
+* [ ] La cantidad de memoria a asignar en bytes.
+* [ ] La cantidad de memoria a asignar en kilobytes.
+* [ ] La cantidad de memoria a asignar en gigabytes.
+* [ ] La cantidad de memoria a asignar en megabytes.

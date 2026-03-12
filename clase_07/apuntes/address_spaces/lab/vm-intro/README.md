@@ -1,17 +1,17 @@
 # Overview
 
-Code from OSTEP chapter [The Abstraction: Address Spaces](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf).
+Code del capitulo de Ostep [The Abstraction: Address Spaces](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf).
 
-To compile, just type:
+Para compilar:
+
 ```
 prompt> make
 ```
 
-See the highly primitive `Makefile` for details.
+Consulte el Makefile (altamente rudimentario) para obtener más detalles.
 
-Then, run it:
+Luego, ejecútelo:
 
 ```
 prompt> ./virtual-addresses
 ```
-
