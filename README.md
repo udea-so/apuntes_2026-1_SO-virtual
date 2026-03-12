@@ -7,7 +7,9 @@
 
 ## Apuntes por clase
 
-En la siguiente tabla se encuentran los apuntes a mano de cada sesión del curso:
+### Modulo 1 - Virtualización de CPU
+
+En la siguiente tabla se encuentran los apuntes a mano de cada sesión del modulo 1:
 
 |Semana	| Clase	| Fecha | Tema | Notas de clase | Observaciones |
 |----|----|----|----|----|----|
@@ -19,9 +21,15 @@ En la siguiente tabla se encuentran los apuntes a mano de cada sesión del curso
 |    | 6 | 26/02/2026 | Clase 5 - Ejecución Directa Limitada (LDE) - Parte 2| Apuntes clase 4 [[pdf]](clase_04/SO_apuntes_clase4_annotated.pdf) [[apuntes]](clase_04/apuntes/) | --- |
 |4   | 7 | 03/03/2026 | Clase 6 - Politicas de planificación - Parte 1| Apuntes clase 5 [[pdf]](clase_05/SO_apuntes_clase5_annotated.pdf) [[apuntes]](clase_05/apuntes/) | --- |
 |    | 8 | 05/03/2026 | Clase 7 - Politicas de planificación - Parte 2| Apuntes clase 5 [[pdf]](clase_05/SO_apuntes_clase5_annotated.pdf) [[apuntes]](clase_05/apuntes/) | --- |
+| 5  | 9 | 10/03/2026 | Clase 8 - MLFQ (Multi-Level Feedback Queue)| Apuntes clase 6 [[pdf]](clase_06/SO_apuntes_clase6.pdf) [[apuntes]](clase_06/apuntes/mlfq/) | --- |
 
+### Modulo 2 - Virtualización de Memoria
 
+En la siguiente tabla se encuentran los apuntes a mano de cada sesión del modulo 2:
 
+|Semana	| Clase	| Fecha | Tema | Notas de clase | Observaciones |
+|----|----|----|----|----|----|
+| 5  | 10 | 12/03/2026 | Clase 9 - Memoria Virtual | Apuntes clase 7 [[apuntes]](clase_07/apuntes/address_spaces/) | --- |
 
 ## Recursos de utilidad
 
