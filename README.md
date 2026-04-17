@@ -29,7 +29,18 @@ En la siguiente tabla se encuentran los apuntes a mano de cada sesión del modul
 
 |Semana	| Clase	| Fecha | Tema | Notas de clase | Observaciones |
 |----|----|----|----|----|----|
-| 5  | 10 | 12/03/2026 | Clase 9 - Memoria Virtual | Apuntes clase 7 [[apuntes]](clase_07/apuntes/address_spaces/) | --- |
+| 5  | 10 | 12/03/2026 | Clase 9 - Memoria Virtual | Apuntes clase 7 [[pdf]] Apuntes clase 7 [[apuntes]](clase_07/apuntes/address_spaces/) | --- |
+| 6  | 11 | 17/03/2026 | Clase 10 - Dynamic Relocation (Base & Bound) | Apuntes clase 8 [[pdf]](clase_08/SO_apuntes_clase8_annotated.pdf) | --- |
+|    | 12 | 19/03/2026 | Clase 11 - Segmentación | Apuntes clase 9 [[pdf]](clase_09/SO_apuntes_clase9_annotated.pdf) Ejemplos clase 9 [[pdf]](clase_09/ejemplo_clase9_annotated.pdf) | --- |
+| 7  | 13 | 24/03/2026 | Clase 12 - Segmentación | Apuntes clase 9 [[pdf]](clase_09/SO_apuntes_clase9_annotated.pdf) Ejemplos clase 9 [[pdf]](clase_09/ejemplo_clase9_annotated.pdf) | --- |
+|    | 14 | 26/03/2026 | Clase 13 - Paginación | Apuntes clase 10 [[pdf]](clase_10/SO_apuntes_clase10_annotated.pdf) | --- |
+| --- | --- | 31/03/2026 | SEMANA SANTA - MARTES SANTO | --- | --- |
+| --- | --- | 02/04/2026 | SEMANA SANTA - JUEVES SANTO | --- | --- |
+| 8  | 15 | 07/04/2026 | Clase 14 - Paginación | Apuntes clase 10 [[pdf]](clase_10/SO_apuntes_clase10_annotated.pdf) | --- |
+|    | 16 | 09/04/2026 | Clase 15 - Paginación | Apuntes clase 10 [[pdf]](clase_10/SO_apuntes_clase10_annotated.pdf) | --- |
+| 9  | 17 | 14/04/2026 | Clase 16 - Paginación | Apuntes clase 10 [[pdf]](clase_10/SO_apuntes_clase10_annotated.pdf) | --- |
+|    | 18 | 16/04/2026 | Clase 17 - TLB | Apuntes clase 11 [[pdf]](clase_11/SO_apuntes_clase11.pdf) | --- |
+
 
 ## Recursos de utilidad
 
