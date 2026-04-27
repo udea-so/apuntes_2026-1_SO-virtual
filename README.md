@@ -39,7 +39,9 @@ En la siguiente tabla se encuentran los apuntes a mano de cada sesión del modul
 | 8  | 15 | 07/04/2026 | Clase 14 - Paginación | Apuntes clase 10 [[pdf]](clase_10/SO_apuntes_clase10_annotated.pdf) | --- |
 |    | 16 | 09/04/2026 | Clase 15 - Paginación | Apuntes clase 10 [[pdf]](clase_10/SO_apuntes_clase10_annotated.pdf) | --- |
 | 9  | 17 | 14/04/2026 | Clase 16 - Paginación | Apuntes clase 10 [[pdf]](clase_10/SO_apuntes_clase10_annotated.pdf) | --- |
-|    | 18 | 16/04/2026 | Clase 17 - TLB | Apuntes clase 11 [[pdf]](clase_11/SO_apuntes_clase11.pdf) | --- |
+|    | 18 | 16/04/2026 | Clase 17 - TLB  | Apuntes clase 11 [[pdf]](clase_11/SO_apuntes_clase11_annotated.pdf) - Anotaciones [[pdf]](clase_11/apuntes_a_mano_07-04-2026_annotated.pdf) | --- |
+| 10  | 19 | 21/04/2026 | Clase 18 - TLB | Apuntes clase 11 [[pdf]](clase_11/SO_apuntes_clase11_annotated.pdf) | --- |
+|    | 20 | 23/04/2026 | Clase 19 - Swapping | Apuntes clase 12 [[pdf]](clase_12/SO_apuntes_clase_12_annotated.pdf) | --- |
 
 
 ## Recursos de utilidad
