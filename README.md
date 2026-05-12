@@ -41,8 +41,24 @@ En la siguiente tabla se encuentran los apuntes a mano de cada sesión del modul
 | 9  | 17 | 14/04/2026 | Clase 16 - Paginación | Apuntes clase 10 [[pdf]](clase_10/SO_apuntes_clase10_annotated.pdf) | --- |
 |    | 18 | 16/04/2026 | Clase 17 - TLB  | Apuntes clase 11 [[pdf]](clase_11/SO_apuntes_clase11_annotated.pdf) - Anotaciones [[pdf]](clase_11/apuntes_a_mano_07-04-2026_annotated.pdf) | --- |
 | 10  | 19 | 21/04/2026 | Clase 18 - TLB | Apuntes clase 11 [[pdf]](clase_11/SO_apuntes_clase11_annotated.pdf) | --- |
-|    | 20 | 23/04/2026 | Clase 19 - Swapping | Apuntes clase 12 [[pdf]](clase_12/SO_apuntes_clase_12_annotated.pdf) | --- |
+|     | 20 | 23/04/2026 | Clase 19 - Swapping | Apuntes clase 12 [[pdf]](clase_12/SO_apuntes_clase_12_annotated.pdf) | --- |
+| 11  | 21 | 28/04/2026 | Clase 21 - Swapping Policies | Apuntes clase 13 [[pdf]](clase_13/SO_apuntes_clase_13_annotated.pdf) | --- |
 
+### Modulo 3 - Concurrencia
+
+|Semana	| Clase	| Fecha | Tema | Notas de clase | Observaciones |
+|----|----|----|----|----|----|
+| 11  | 22 | 30/04/2026 | Clase 22 -  |  | --- |
+| 12  | 23 | 05/05/2026 | Clase 23 -  |  | --- |
+|     | 24 | 07/05/2026 | Clase 24 -  |  | --- |
+| 13  | 25 | 12/05/2026 | Clase 25 -  |  | --- |
+|     | 26 | 14/05/2026 | Clase 26 -  |  | --- |
+| 14  | 27 | 19/05/2026 | Clase 27 -  |  | --- |
+|     | 28 | 21/05/2026 | Clase 28 -  |  | --- |
+| 15  | 29 | 26/05/2026 | Clase 29 -  |  | --- |
+|     | 20 | 28/05/2026 | Clase 30 -  |  | --- |
+| 16  | 31 | 02/06/2026 | Clase 31 -  |  | --- |
+|     | 32 | 04/06/2026 | Clase 31 -  |  | --- |
 
 ## Recursos de utilidad
 
