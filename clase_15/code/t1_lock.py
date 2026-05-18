@@ -1,6 +1,9 @@
 import threading
 import sys
 
+
+# python3 t1_lock.py 1000
+
 # Necesario usar un objeto para que sea mutable y compartido entre hilos
 class Counter:
     def __init__(self):

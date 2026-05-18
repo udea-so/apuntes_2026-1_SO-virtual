@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
     
     printf("before failing cas: %d\n", global);
     success = compare_and_swap(&global, 0, 200);
-    printf("after failing cas: %d (old: %d)\n", global, success);
+    printf("after failing cas: %d (success: %d)\n", global, success);
 
     return 0;
 }
