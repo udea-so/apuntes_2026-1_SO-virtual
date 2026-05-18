@@ -36,8 +36,8 @@ int main(int argc, char *argv[]) {
   myret_t *m;
 
   myarg_t args;
-  args.a = 10;
-  args.b = 20;
+  args. 10;
+  args.b = 20;a =
   pthread_create(&p, NULL, mythread, &args);
   pthread_join(p, (void **) &m); // this thread has been
                                  // waiting inside of the
