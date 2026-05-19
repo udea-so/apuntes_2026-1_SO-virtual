@@ -2,6 +2,9 @@ import threading
 import sys
 import time
 
+# python3 t1_nolock.py 1000
+
+
 # Necesario usar un objeto para que sea mutable y compartido entre hilos
 class Counter:
     def __init__(self):
