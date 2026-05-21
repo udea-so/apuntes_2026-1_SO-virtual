@@ -48,10 +48,10 @@ En la siguiente tabla se encuentran los apuntes a mano de cada sesión del modul
 
 |Semana	| Clase	| Fecha | Tema | Notas de clase | Observaciones |
 |----|----|----|----|----|----|
-| 11  | 22 | 30/04/2026 | Clase 22 -  |  | --- |
-| 12  | 23 | 05/05/2026 | Clase 23 -  |  | --- |
-|     | 24 | 07/05/2026 | Clase 24 -  |  | --- |
-| 13  | 25 | 12/05/2026 | Clase 25 -  |  | --- |
+| 11  | 22 | 30/04/2026 | Clase 22 - Threads | Apuntes clase 14 [[pdf]](clase_14/SO_apuntes_clase_14_annotated.pdf) | --- |
+| 12  | 23 | 05/05/2026 | Clase 23 - Threads | Apuntes clase 14 [[pdf]](clase_14/SO_apuntes_clase_14_annotated.pdf) | --- |
+|     | 24 | 07/05/2026 | Clase 24 - Threads  | Apuntes clase 14 [[pdf]](clase_14/SO_apuntes_clase_14_annotated.pdf) | Agregar bonus de 0.1 al parcial |
+| 13  | 25 | 12/05/2026 | Clase 25 - Locks |  | --- |
 |     | 26 | 14/05/2026 | Parcial modulos 1 y 2  |  | --- |
 | 14  | 27 | 19/05/2026 | Clase 26 -  |  | --- |
 |     | 28 | 21/05/2026 | Clase 27 -  |  | --- |
