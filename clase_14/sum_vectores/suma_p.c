@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <sys/time.h> // Necesario para gettimeofday
 #include <assert.h>   // Necesario para assert
-# include "common.h" // Para GetTime() y Spin()
+#include "common.h" // Para GetTime() y Spin()
 
 
 // ======================================================
@@ -35,7 +35,6 @@ void* sumar_porcion_vector(void* args) {
         // Spin(0.000001);
     }
 
-    pthread_exit(NULL);
     return NULL;
 }
 
@@ -43,7 +42,7 @@ void* sumar_porcion_vector(void* args) {
 // Función principal con tus funciones integradas
 // ======================================================
 int main() {
-    const int TAMANO = 1000000000;
+    const int TAMANO = 100000000; // 100M → ~1.2 GB. Cambie a 1000000000 si tiene 16+ GB libres.
     int* v1 = (int*)malloc(TAMANO * sizeof(int));
     int* v2 = (int*)malloc(TAMANO * sizeof(int));
     int* resultado = (int*)malloc(TAMANO * sizeof(int));
@@ -58,7 +57,7 @@ int main() {
         v2[i] = i * 2;
     }
 
-    const int NUM_HILOS = sysconf(_SC_NPROCESSORS_ONLN);
+    const int NUM_HILOS = (int) sysconf(_SC_NPROCESSORS_ONLN);
     printf("Usando %d hilos para la suma.\n", NUM_HILOS);
 
     pthread_t hilos[NUM_HILOS];
