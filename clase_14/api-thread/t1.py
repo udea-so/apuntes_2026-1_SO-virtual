@@ -19,10 +19,9 @@ def mythread(arg):
 
 if __name__ == "__main__":
   if len(sys.argv) != 2:
-    print("usage: main <loopcount>")
+    print("usage: t1.py <loopcount>")
   else:
-    max = int(sys.argv[1])
-    print("main: begin")
+    max = int(sys.argv[1])    
     print(f"main: begin [counter = {counter.value}]")
   
     # Creacion de los hilos
@@ -36,5 +35,5 @@ if __name__ == "__main__":
     p2.join()
     # Mensaje que se imprime despues de que el padre reinicia su ejecucion
     # print(f"end: begin [counter = {counter.value}] [address = {hex(id(counter))}]")
-    print(f"end: begin [counter = {counter.value}]")
-    print(f" [counter: {counter.value}]\n [should: {max*2}]\n")
+    print(f"main: done")
+    print(f" [counter: {counter.value}]\n [should: {max*2}]")

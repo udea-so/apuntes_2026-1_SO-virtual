@@ -1,5 +1,6 @@
 import threading
 import sys
+import time
 
 def mythread(arg):
   print(arg)
@@ -18,5 +19,6 @@ if __name__ == "__main__":
     # El hilo padre espera que los hilos hijos culminen
     p1.join()
     p2.join()
+    # time.sleep(3)
     # Mensaje que se imprime despues de que el padre reinicia su ejecucion
     print("main: end")

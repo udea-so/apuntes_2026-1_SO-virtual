@@ -28,20 +28,14 @@ int main(int argc, char *argv[]) {
 	exit(1);
     }
 
-    pthread_t p1, p2, p3, p4, p5;
+    pthread_t p1, p2;
     printf("main: begin\n");
     // create two threads
     pthread_create(&p1, NULL, mythread, "A");
     pthread_create(&p2, NULL, mythread, "B");
-    pthread_create(&p3, NULL, mythread, "C");
-    pthread_create(&p4, NULL, mythread, "D");
-    pthread_create(&p5, NULL, mythread, "E");
     // join waits for the threads to finish
-    // pthread_join(p1, NULL);
-    // pthread_join(p2, NULL);
-    // pthread_join(p3, NULL);
-    // pthread_join(p4, NULL);
-    pthread_join(p5, NULL);
+    pthread_join(p1, NULL);
+    pthread_join(p2, NULL);    
     // sleep(3);
     printf("main: end\n");
     return 0;

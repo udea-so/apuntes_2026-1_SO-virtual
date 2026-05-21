@@ -29,7 +29,7 @@ void *mythread(void *arg) {
                                                                              
 int main(int argc, char *argv[]) {                    
     if (argc != 2) {
-        fprintf(stderr, "usage: main-first <loopcount>\n");
+        fprintf(stderr, "usage: t1 <loopcount>\n");
         exit(1);
     }
     max = atoi(argv[1]);
