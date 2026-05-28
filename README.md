@@ -48,16 +48,16 @@ En la siguiente tabla se encuentran los apuntes a mano de cada sesión del modul
 
 |Semana	| Clase	| Fecha | Tema | Notas de clase | Observaciones |
 |----|----|----|----|----|----|
-| 11  | 22 | 30/04/2026 | Clase 22 - Threads | Apuntes clase 14 [[pdf]](clase_14/SO_apuntes_clase_14_annotated.pdf) | --- |
-| 12  | 23 | 05/05/2026 | Clase 23 - Threads | Apuntes clase 14 [[pdf]](clase_14/SO_apuntes_clase_14_annotated.pdf) | --- |
-|     | 24 | 07/05/2026 | Clase 24 - Threads  | Apuntes clase 14 [[pdf]](clase_14/SO_apuntes_clase_14_annotated.pdf) | Agregar bonus de 0.1 al parcial |
-| 13  | 25 | 12/05/2026 | Clase 25 - Locks |  | --- |
-|     | 26 | 14/05/2026 | Parcial modulos 1 y 2  |  | --- |
-| 14  | 27 | 19/05/2026 | Clase 26 -  |  | --- |
-|     | 28 | 21/05/2026 | Clase 27 -  |  | --- |
-| 15  | 29 | 26/05/2026 | Clase 28 -  |  | --- |
-|     | 20 | 28/05/2026 | Clase 29 -  |  | --- |
-| 16  | 31 | 02/06/2026 | Clase 30 -  |  | --- |
+| 11  | 22 | 30/04/2026 | Clase 22 - Threads | Apuntes clase 14 [[pdf]](clase_14/SO_apuntes_clase_14_annotated.pdf) [[code]](clase_14/api-thread/) | --- |
+| 12  | 23 | 05/05/2026 | Clase 23 - Threads | Apuntes clase 14 [[pdf]](clase_14/SO_apuntes_clase_14_annotated.pdf) [[code]](clase_14/api-thread/) | --- |
+|     | 24 | 07/05/2026 | Clase 24 - Threads  | Apuntes clase 14 [[pdf]](clase_14/SO_apuntes_clase_14_annotated.pdf) [[code]](clase_14/api-thread/)| Agregar bonus de 0.1 al parcial |
+| 13  | 25 | 12/05/2026 | Clase 25 - Locks | Apuntes clase 15 [[pdf]](clase_15/SO_apuntes_clase_15_annotated.pdf) [[code]](clase_15/code/) | --- |
+|     | 26 | 14/05/2026 | Parcial modulos 1 y 2  | --- | --- |
+| 14  | 27 | 19/05/2026 | Clase 26 - Locks | Apuntes clase 15 [[pdf]](clase_15/SO_apuntes_clase_15_annotated.pdf) [[code]](clase_15/code/) | --- |
+|     | 28 | 21/05/2026 | Clase 27 - Locks  | --- |
+| 15  | 29 | 26/05/2026 | Clase 28 - Estructuras de datos basadas en locks | Apuntes clase 15 [[pdf]](clase_16/SO_apuntes_clase_16/code) [[code]](clase_16/code/)  |  | --- |
+|     | 20 | 28/05/2026 | Clase 29 - Variables de condición | [[pdf]](clase_17/) [[code]](clase_17/code/variables-condicion/) | --- |
+| 16  | 31 | 02/06/2026 | Clase 30 - Variables de condición  |  | --- |
 |     | 32 | 04/06/2026 | Clase 31 -  |  | --- |
 
 
