@@ -58,7 +58,7 @@ En la siguiente tabla se encuentran los apuntes a mano de cada sesión del modul
 | 15  | 29 | 26/05/2026 | Clase 28 - Estructuras de datos basadas en locks | Apuntes clase 15 [[pdf]](clase_16/SO_apuntes_clase_16_annotated.pdf) [[code]](clase_16/code/)  |  | --- |
 |     | 20 | 28/05/2026 | Clase 29 - Variables de condición | [[pdf]](clase_17/SO_apuntes_clase_17_annotated.pdf) [[code]](clase_17/code/variables-condicion/) | --- |
 | 16  | 31 | 02/06/2026 | Clase 30 - Variables de condición  | [[pdf]](clase_17/SO_apuntes_clase_17_annotated.pdf) [[code]](clase_17/code/productor-consumidor/diapositivas/) | --- |
-|     | 32 | 04/06/2026 | Clase 31 - Semaforos | Intrucciones clase [[link]](clase_18/README.md) | --- |
+|     | 32 | 04/06/2026 | Clase 31 - Semaforos | Intrucciones clase [[link]](clase_18/) [[code]](clase_18/code/) | --- |
 
 
 
