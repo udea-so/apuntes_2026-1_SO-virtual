@@ -55,10 +55,10 @@ En la siguiente tabla se encuentran los apuntes a mano de cada sesión del modul
 |     | 26 | 14/05/2026 | Parcial modulos 1 y 2  | --- | --- |
 | 14  | 27 | 19/05/2026 | Clase 26 - Locks | Apuntes clase 15 [[pdf]](clase_15/SO_apuntes_clase_15_annotated.pdf) [[code]](clase_15/code/) | --- |
 |     | 28 | 21/05/2026 | Clase 27 - Locks  | --- |
-| 15  | 29 | 26/05/2026 | Clase 28 - Estructuras de datos basadas en locks | Apuntes clase 15 [[pdf]](clase_16/SO_apuntes_clase_16/code) [[code]](clase_16/code/)  |  | --- |
-|     | 20 | 28/05/2026 | Clase 29 - Variables de condición | [[pdf]](clase_17/) [[code]](clase_17/code/variables-condicion/) | --- |
-| 16  | 31 | 02/06/2026 | Clase 30 - Variables de condición  |  | --- |
-|     | 32 | 04/06/2026 | Clase 31 -  |  | --- |
+| 15  | 29 | 26/05/2026 | Clase 28 - Estructuras de datos basadas en locks | Apuntes clase 15 [[pdf]](clase_16/SO_apuntes_clase_16_annotated.pdf) [[code]](clase_16/code/)  |  | --- |
+|     | 20 | 28/05/2026 | Clase 29 - Variables de condición | [[pdf]](clase_17/SO_apuntes_clase_17_annotated.pdf) [[code]](clase_17/code/variables-condicion/) | --- |
+| 16  | 31 | 02/06/2026 | Clase 30 - Variables de condición  | [[pdf]](clase_17/SO_apuntes_clase_17_annotated.pdf) [[code]](clase_17/code/productor-consumidor/diapositivas/) | --- |
+|     | 32 | 04/06/2026 | Clase 31 - Semaforos | Intrucciones clase [[link]](clase_18/README.md) | --- |
 
 
 
